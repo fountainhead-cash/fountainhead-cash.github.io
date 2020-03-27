@@ -4,260 +4,269 @@
         <title>fountainhead.cash</title>
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
         <style>
-			@charset "UTF-8";
-			*, *:before, *:after {
-			  box-sizing: border-box;
-			  outline: none;
-			}
+            @charset "UTF-8";
+            *, *:before, *:after {
+              box-sizing: border-box;
+              outline: none;
+            }
 
-			html {
+            html {
               font-family: 'Source Sans Pro', monospace;
-			  font-size: 16px;
-			  font-smooth: auto;
-			  font-weight: 300;
-			  line-height: 1.5;
-			  color: #fff;
-			}
-
-			body {
-			  position: relative;
-			  width: 100%;
-			  background-color: #34495e;
-			}
-
-			a {
-			  text-decoration: none;
-			}
-			section {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-			}
-			section#intro {
-				align-items: center;
-				flex-flow: column;
-			}
-			section#donate {
-				background-color: #ffffff0f;
-				align-items: center;
-				flex-flow: column;
-			}
-			section#sponsors {
-				background-color: #ffffff0f;
-				align-items: center;
-				flex-flow: column;
+              font-size: 16px;
+              font-smooth: auto;
+              font-weight: 300;
+              line-height: 1.5;
+              color: #fff;
             }
-			section#team {
-				background-color: #ffffff0f;
-				align-items: center;
-				flex-flow: column;
-            }
-			section#contact {
-				align-items: center;
-				flex-flow: column;
-			}
 
-			figure {
-			  position: relative;
-			  display: flex;
-			  align-items: flex-start;
-			  justify-content: center;
-			  width: 290px;
-			  height: 395px;
-			  padding: 20px 20px;
-			  background-position: center center;
-			  background-repeat: no-repeat;
-			  background-size: cover;
-			  border-radius: 10px;
-			  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-			  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-			  overflow: hidden;
-			}
+            body {
+              position: relative;
+              width: 100%;
+              background-color: #34495e;
+            }
+
+            a {
+              text-decoration: none;
+            }
+            section {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding-bottom:3rem;
+            }
+            section > section {
+                padding-bottom:0rem;
+            }
+            section#intro {
+                align-items: center;
+                flex-flow: column;
+            }
+            section#donate {
+                background-image: url(background.jpg);
+                background-position: bottom;
+                align-items: center;
+                flex-flow: column;
+            }
+            section#sponsors {
+                background-color: #ffffff0f;
+                align-items: center;
+                flex-flow: column;
+            }
+            section#team {
+                background-color: #ffffff0f;
+                align-items: center;
+                flex-flow: column;
+            }
+            section#contact {
+                align-items: center;
+                flex-flow: column;
+            }
+
+            figure {
+              position: relative;
+              display: flex;
+              align-items: flex-start;
+              justify-content: center;
+              width: 290px;
+              height: 395px;
+              padding: 20px 20px;
+              background-position: center center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              border-radius: 10px;
+              box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+              transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+              overflow: hidden;
+            }
             section#team figure {
                 height: 290px;
             }
-			figure:before, figure:after {
-			  position: absolute;
-			  top: 0;
-			  left: 0;
-			  width: 100%;
-			  height: 100%;
-			}
-			figure:before {
-			  content: '';
-			  background-color: rgba(0, 0, 0, 0.1);
-			  z-index: 0;
-			}
-			figure:after {
-			  content: '';
-			  display: flex;
-			  align-items: center;
-			  justify-content: center;
-			  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-			  overflow: hidden;
+            figure:before, figure:after {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+            figure:before {
+              content: '';
+              background-color: rgba(0, 0, 0, 0.1);
+              z-index: 0;
+            }
+            figure:after {
+              content: '';
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+              overflow: hidden;
               background-color: rgba(0, 0, 0, 0.6);
-			}
-			figure:hover:after {
-			  content: '▶️';
-			  background-color: rgba(0, 0, 0, 0);
-			  color: white;
-			  font-size: 72px;
-			  z-index: 2;
-			}
+            }
+            figure:hover:after {
+              content: '▶️';
+              background-color: rgba(0, 0, 0, 0);
+              color: white;
+              font-size: 72px;
+              z-index: 2;
+            }
 
-			figure:hover figcaption {
-			  transform: translateY(-110%);
-			}
-			figure figcaption {
-			  color: white;
-			  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-			  z-index: 1;
-			}
-			figure figcaption h4 {
-			  margin: 0 0 5px;
-			  font-family: "Source Code Pro", sans-serif;
-			  font-size: 24px;
-			  line-height: 1.35;
-			  text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
-			}
-			figure figcaption h4 > span {
-			  width: 100%;
-			  text-shadow: 2px 2px #000;
-			  padding: 0.25rem;
-			}
-			figure figcaption p, figure figcaption ul {
-			  margin: 0;
-			  line-height: 1.8;
-			  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
-			  padding: 0.25rem;
-			}
+            figure:hover figcaption {
+              transform: translateY(-110%);
+            }
+            figure figcaption {
+              color: white;
+              transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+              z-index: 1;
+            }
+            figure figcaption h4 {
+              margin: 0 0 5px;
+              font-family: "Source Code Pro", sans-serif;
+              font-size: 24px;
+              line-height: 1.35;
+              text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+            }
+            figure figcaption h4 > span {
+              width: 100%;
+              text-shadow: 2px 2px #000;
+              padding: 0.25rem;
+            }
+            figure figcaption p, figure figcaption ul {
+              margin: 0;
+              line-height: 1.8;
+              text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+              padding: 0.25rem;
+            }
 
-			h1 {
-				font-size:4rem;
-				margin: 0;
-			}
-			.sponsor {
-				width: 90px;
-				height: 90px;
-				border-radius: 100%;
-				background-color:#fff;
-				margin:1rem;
-				background-size:contain;
-			}
+            h1 {
+                font-size:4rem;
+                margin: 0;
+            }
+            .sponsor {
+                width: 90px;
+                height: 90px;
+                border-radius: 100%;
+                background-color:#fff;
+                margin:1rem;
+                background-size:contain;
+            }
             a {
                 color: #3C93DA;
             }
-            input, textarea,button {
-				font-family: 'Source Sans Pro', monospace;
-				font-size: 2rem;
-				border: 1px solid #333;
-				outline: 0;
-				padding: .5rem;
-				width: 30rem;
-				margin-bottom:1rem;
+            a#donateaddr {
+                background-color: #fff;
+                padding: 0.5rem;
             }
-			button {
-				background-color: #ffffff5f;
-			}
-			button:hover {
-				background-color: #ffffff8f;
-				cursor: pointer;
-			}
+            input, textarea,button {
+                font-family: 'Source Sans Pro', monospace;
+                font-size: 2rem;
+                border: 1px solid #333;
+                outline: 0;
+                padding: .5rem;
+                width: 30rem;
+                margin-bottom:1rem;
+            }
+            button {
+                background-color: #ffffff5f;
+            }
+            button:hover {
+                background-color: #ffffff8f;
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
-		<section id="intro">
-			<h1>fountainhead.cash</h1>
-			<h2>The source for Bitcoin Cash technology solutions<br>
-			join our <a href="http://t.me/fountainheadcash">chat</a>,
-			checkout the <a href="http://github.com/fountainhead-cash">code</a>,
-			and read the <a href="https://docs.fountainhead.cash/docs/bitdb">docs</a>
-			</h2>
-		</section>
+        <section id="intro">
+            <h1>fountainhead.cash</h1>
+            <h2>The source for Bitcoin Cash technology solutions<br>
+            join our <a href="http://t.me/fountainheadcash">chat</a>,
+            checkout the <a href="http://github.com/fountainhead-cash">code</a>,
+            and read the <a href="https://docs.fountainhead.cash/docs/bitdb">docs</a>
+            </h2>
+        </section>
 
-		<section id="sponsors">
-			<h1>Sponsors</h1>
-			<section id="sponsorspane">
-				<a class="sponsor" href="https://simpleledger.io" style="background-image: url(sponsors/slpinc.png)"></a>
-				<a class="sponsor" href="#" style="background-image: url(sponsors/checksum.png");></a>
-				<a class="sponsor" href="#" style="background-image: url(sponsors/imuname.png");></a>
-			</section>
-			<object type="image/svg+xml" data="https://rcimg.net/images/sponsors/svg/blockparty-sh.svg" style="margin: auto;"></object>
-		</section>
+        <section id="sponsors">
+            <h1>Sponsors</h1>
+            <section id="sponsorspane">
+                <a class="sponsor" href="https://simpleledger.io" style="background-image: url(sponsors/slpinc.png)"></a>
+                <a class="sponsor" href="#" style="background-image: url(sponsors/checksum.png");></a>
+                <a class="sponsor" href="#" style="background-image: url(sponsors/imuname.png");></a>
+            </section>
+            <object type="image/svg+xml" data="https://rcimg.net/images/sponsors/svg/blockparty-sh.svg" style="margin: auto;"></object>
+        </section>
 
-		<section id="services">
-			<h1>Services</h1>
-			<section id="sponsorspane">
-				<a href="https://bitdb.fountainhead.cash">
-					<figure style="background-image: url(https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
-						<figcaption>
-							<h4> <span>BitDB</span></h4>
-							<p>BitDB is an autonomous database that continuously synchronizes itself with Bitcoin</p>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="https://bitsocket.fountainhead.cash">
-					<figure style="background-image: url(https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
-						<figcaption>
-							<h4> <span>BitSocket</span></h4>
-							<p>Bitsocket lets you subscribe to any pattern of realtime bitcoin transactions through Bitquery and build apps that are driven by the event.</p>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="https://slpdb.fountainhead.cash">
-					<figure style="background-image: url(https://images.pexels.com/photos/410627/pexels-photo-410627.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
-						<figcaption>
-							<h4> <span>SLPDB</span></h4>
-							<p>SLPDB stores all token data for the Simple Ledger Protocol and makes it available over a powerful MongoDB API.</p>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="https://slpsocket.fountainhead.cash">
-					<figure style="background-image: url(https://images.pexels.com/photos/3062524/pexels-photo-3062524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
-						<figcaption>
-							<h4> <span>SLPSocket</span></h4>
-							<p>SLPSocket is a frontend API for SLPDB that provides a streaming output of new transactions.</p>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="https://gs.fountainhead.cash">
-					<figure style="background-image: url(https://images.pexels.com/photos/96381/pexels-photo-96381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
-						<figcaption>
-							<h4> <span>GS++</span></h4>
-							<p>GS++ is a fast SLP indexer, validator, and graph search server for SLP.</p>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="https://slpstream.fountainhead.cash">
-					<figure style="background-image: url(https://images.pexels.com/photos/414860/pexels-photo-414860.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
-						<figcaption>
-							<h4> <span>SLPStream</span></h4>
-							<p>SLPStream is a frontend API for GS++ that provides a streaming output of new transactions.</p>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="https://bchd.fountainhead.cash">
-					<figure style="background-image: url(https://images.pexels.com/photos/2911364/pexels-photo-2911364.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
-						<figcaption>
-							<h4> <span>BCHD</span></h4>
-							<p>HTTP endpoint for BCHD, which is a mature, full node implementation of the Bitcoin Cash protocol.</p>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="https://insomnia.fountainhead.cash">
-					<figure style="background-image: url(https://images.pexels.com/photos/2130475/pexels-photo-2130475.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
-						<figcaption>
-							<h4> <span>INSOMNIA</span></h4>
-							<p>Easily self-hosted HTTP frontend for ElectrumX servers. UTXO lookup, transaction broadcasting, merkle proofs.</p>
-						</figcaption>
-					</figure>
-				</a>
-			</section>
-		</section>
+        <section id="services">
+            <h1>Services</h1>
+            <section id="sponsorspane">
+                <a href="https://bitdb.fountainhead.cash">
+                    <figure style="background-image: url(https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+                        <figcaption>
+                            <h4> <span>BitDB</span></h4>
+                            <p>BitDB is an autonomous database that continuously synchronizes itself with Bitcoin</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://bitsocket.fountainhead.cash">
+                    <figure style="background-image: url(https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+                        <figcaption>
+                            <h4> <span>BitSocket</span></h4>
+                            <p>Bitsocket lets you subscribe to any pattern of realtime bitcoin transactions through Bitquery and build apps that are driven by the event.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://slpdb.fountainhead.cash">
+                    <figure style="background-image: url(https://images.pexels.com/photos/410627/pexels-photo-410627.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+                        <figcaption>
+                            <h4> <span>SLPDB</span></h4>
+                            <p>SLPDB stores all token data for the Simple Ledger Protocol and makes it available over a powerful MongoDB API.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://slpsocket.fountainhead.cash">
+                    <figure style="background-image: url(https://images.pexels.com/photos/3062524/pexels-photo-3062524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+                        <figcaption>
+                            <h4> <span>SLPSocket</span></h4>
+                            <p>SLPSocket is a frontend API for SLPDB that provides a streaming output of new transactions.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://gs.fountainhead.cash">
+                    <figure style="background-image: url(https://images.pexels.com/photos/96381/pexels-photo-96381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+                        <figcaption>
+                            <h4> <span>GS++</span></h4>
+                            <p>GS++ is a fast SLP indexer, validator, and graph search server for SLP.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://slpstream.fountainhead.cash">
+                    <figure style="background-image: url(https://images.pexels.com/photos/414860/pexels-photo-414860.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+                        <figcaption>
+                            <h4> <span>SLPStream</span></h4>
+                            <p>SLPStream is a frontend API for GS++ that provides a streaming output of new transactions.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://bchd.fountainhead.cash">
+                    <figure style="background-image: url(https://images.pexels.com/photos/2911364/pexels-photo-2911364.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+                        <figcaption>
+                            <h4> <span>BCHD</span></h4>
+                            <p>HTTP endpoint for BCHD, which is a mature, full node implementation of the Bitcoin Cash protocol.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://insomnia.fountainhead.cash">
+                    <figure style="background-image: url(https://images.pexels.com/photos/2130475/pexels-photo-2130475.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+                        <figcaption>
+                            <h4> <span>INSOMNIA</span></h4>
+                            <p>Easily self-hosted HTTP frontend for ElectrumX servers. UTXO lookup, transaction broadcasting, merkle proofs.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+            </section>
+        </section>
 
-		<section id="team">
-			<h1>Team</h1>
-			<section id="teampane">
+        <section id="team">
+            <h1>Team</h1>
+            <section id="teampane">
                 <a href="https://github.com/kosinusbch/">
                     <figure style="background-image: url(team/kosinus.png)">
                         <figcaption>
@@ -328,7 +337,7 @@
             </section>
         </section>
 
-		<section id="contact">
+        <section id="contact">
             <h1>Contact</h1>
             <p>
                 Do you have a project that could benefit from fountainhead services or manpower?
@@ -346,12 +355,12 @@
             </form>
         </section>
 
-		<section id="donate">
-			<h1>Donate</h1>
-            <a href="bitcoincash:qpygaungmfry8xzxphj4pw24kk5l9vfxlyhy0z36al">bitcoincash:qpygaungmfry8xzxphj4pw24kk5l9vfxlyhy0z36al</a><br>
+        <section id="donate">
+            <h1>Donate</h1>
+            <a id="donateaddr" href="bitcoincash:qpygaungmfry8xzxphj4pw24kk5l9vfxlyhy0z36al">bitcoincash:qpygaungmfry8xzxphj4pw24kk5l9vfxlyhy0z36al</a><br>
             <a><img style="padding:2rem; background-color:#fff" src="donateqr.png"></a><br>
             <a href="https://www.patreon.com/fountainheadcash"><img src="become_a_patron_button@2x.png"></a>
-		</section>
+        </section>
 
     </body>
 </html>
