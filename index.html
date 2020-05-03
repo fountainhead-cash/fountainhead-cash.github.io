@@ -113,6 +113,15 @@
               font-size: 72px;
               z-index: 2;
             }
+            #testnetservices {
+                background-color: rgba(255, 131, 131, 0.1);
+                border-radius: 5px;
+                box-shadow: 0px 0px 1px rgba(255, 131, 131, 0.1);
+                padding: 1rem;
+            }
+            #testnetservices figure:before {
+              background-color: rgba(255, 0, 200, 0.25);
+            }
 
             figure:hover figcaption {
               transform: translateY(-110%);
@@ -144,6 +153,8 @@
             h1 {
                 font-size:4rem;
                 margin: 0;
+                width: 100%;
+                text-align: center;
             }
             .sponsor {
                 width: 90px;
@@ -204,7 +215,7 @@
 
         <section id="services">
             <h1>Services</h1>
-            <section id="sponsorspane">
+            <section>
                 <a href="https://bitdb.fountainhead.cash">
                     <figure style="background-image: url(https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
                         <figcaption>
@@ -265,6 +276,33 @@
                     <figure style="background-image: url(https://images.pexels.com/photos/2130475/pexels-photo-2130475.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
                         <figcaption>
                             <h4> <span>INSOMNIA</span></h4>
+                            <p>Easily self-hosted HTTP frontend for ElectrumX servers. UTXO lookup, transaction broadcasting, merkle proofs.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+            </section>
+            <h1>Testnet Services</h1>
+            <section id="testnetservices">
+                <a href="https://slpdb-testnet.fountainhead.cash">
+                    <figure style="background-image: url(https://images.pexels.com/photos/410627/pexels-photo-410627.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+                        <figcaption>
+                            <h4> <span>SLPDB-testnet</span></h4>
+                            <p>SLPDB stores all token data for the Simple Ledger Protocol and makes it available over a powerful MongoDB API.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://slpsocket-testnet.fountainhead.cash">
+                    <figure style="background-image: url(https://images.pexels.com/photos/3062524/pexels-photo-3062524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+                        <figcaption>
+                            <h4> <span>SLPSocket-testnet</span></h4>
+                            <p>SLPSocket is a frontend API for SLPDB that provides a streaming output of new transactions.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://insomnia-testnet.fountainhead.cash">
+                    <figure style="background-image: url(https://images.pexels.com/photos/2130475/pexels-photo-2130475.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+                        <figcaption>
+                            <h4> <span>INSOMNIA-testnet</span></h4>
                             <p>Easily self-hosted HTTP frontend for ElectrumX servers. UTXO lookup, transaction broadcasting, merkle proofs.</p>
                         </figcaption>
                     </figure>
