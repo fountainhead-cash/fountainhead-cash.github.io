@@ -1,18 +1,18 @@
 <!doctype html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>fountainhead.cash</title>
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
         <style>
-            @charset "UTF-8";
-            *, *:before, *:after {
-              box-sizing: border-box;
-              outline: none;
+            *, ::after, ::before {
+                box-sizing: border-box;
+                overflow-wrap: break-word;
             }
-
             html {
               font-family: 'Source Sans Pro', monospace;
-              font-size: 16px;
+              font-size: 1em;
               font-smooth: auto;
               font-weight: 300;
               line-height: 1.5;
@@ -22,8 +22,6 @@
             }
 
             body {
-              position: relative;
-              width: 100%;
               background-color: #34495e;
               padding: 0;
               margin: 0;
@@ -36,7 +34,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                padding-bottom:3rem;
+                padding: 0.5em 0.5em 1.5em 0.5em;
             }
             section > section {
                 padding-bottom:0rem;
@@ -44,6 +42,13 @@
             section#intro {
                 align-items: center;
                 flex-flow: column;
+                text-align: center;
+                padding: 3vh 0.5em 5vh 0.5em;
+            }
+            section#intro p {
+                text-align: center;
+                margin: 0;
+                font-size: 1.5em;
             }
             section#donate {
                 background-image: url(background.jpg);
@@ -55,11 +60,17 @@
                 background-color: #ffffff0f;
                 align-items: center;
                 flex-flow: column;
+                overflow: auto;
             }
             section#team {
                 background-color: #ffffff0f;
                 align-items: center;
                 flex-flow: column;
+            }
+            section#contact p {
+                text-align: center;
+                margin: 0;
+                font-size: 1.15em;
             }
             section#contact {
                 align-items: center;
@@ -149,9 +160,11 @@
               text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
               padding: 0.25rem;
             }
-
+            #into h1 {
+                line-height: 1.25;
+            }
             h1 {
-                font-size:4rem;
+                font-size: 3.45em;
                 margin: 0;
                 width: 100%;
                 text-align: center;
@@ -171,17 +184,26 @@
             }
             a#donateaddr {
                 background-color: #fff;
-                padding: 0.5rem;
+                padding: 0.5rem 1rem;
                 word-break: break-all;
+                border-radius: 0.25rem;
+            }
+            form {
+                width: 690px;
+                max-width: 95%;
+                margin: 1em 0px 0px 0px;
             }
             input, textarea,button {
                 font-family: 'Source Sans Pro', monospace;
-                font-size: 2rem;
+                font-size: 1.5em;
                 border: 1px solid #333;
                 outline: 0;
-                padding: .5rem;
-                width: 30rem;
-                margin-bottom:1rem;
+                margin-bottom: 1rem;
+                padding: .375rem .75rem;
+                background: #fff;
+                border: 1px solid #cfcfcf;
+                border-radius: .25rem;
+                width: 100%;
             }
             button {
                 background-color: #ffffff5f;
@@ -190,16 +212,22 @@
                 background-color: #ffffff8f;
                 cursor: pointer;
             }
+            img {
+                max-width: 100%;
+            }
+            @media only screen and (max-width: 775px) {
+                figure {
+                    width: auto;
+                    height: 230px;
+                }
+            }
         </style>
     </head>
     <body>
         <section id="intro">
-            <h1>fountainhead.cash</h1>
-            <h2>The source for Bitcoin Cash technology solutions<br>
-            join our <a href="http://t.me/fountainheadcash">chat</a>,
-            checkout the <a href="http://github.com/fountainhead-cash">code</a>,
-            and read the <a href="https://docs.fountainhead.cash/docs/bitdb">docs</a>
-            </h2>
+            <h1>Fountainhead Cash</h1>
+            <p>The source for Bitcoin Cash technology solutions</p>
+            <p>join our <a href="http://t.me/fountainheadcash">chat</a>, checkout the <a href="http://github.com/fountainhead-cash">code</a>, and read the <a href="https://docs.fountainhead.cash/docs/bitdb">docs</a></p>
         </section>
 
         <section id="sponsors">
@@ -403,18 +431,12 @@
 
         <section id="contact">
             <h1>Contact</h1>
-            <p>
-                Do you have a project that could benefit from fountainhead services or manpower?
-                <br>
-                Please reach out we would be happy to talk with you.
-            </p>
+            <p>Do you have a project that could benefit from fountainhead services or manpower?</p>
+            <p>Please reach out we would be happy to talk with you.</p>
             <form action="https://formspree.io/xqkljnak" method="POST">
                 <input type="text" name="name" placeholder="Name" required>
-                <br>
                 <input type="email" name="_replyto" placeholder="Email" required>
-                <br>
                 <textarea name="message" placeholder="Your message here..." required></textarea>
-                <br>
                 <button type="submit">Send</button>
             </form>
         </section>
